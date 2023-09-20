@@ -1,0 +1,140 @@
+:root {
+    --GRAY1: #F2F2F2;
+    --GRAY2: #D9D9D9;
+    --GRAY3: #808080;
+    --GRAY4: #333333;
+    --GRAY5: #262626;
+    --GRAY6: #1A1A1A;
+    --GRAY7: #0D0D0D;
+
+    --GOLD1: #DAA520;
+    --GOLD2: #CD9A0E;
+    --GOLD3: #c18f00;
+
+    --GREEN1: #008000;
+    --GREEN2: #0f6a08;
+    --GREEN3: #14540d;
+
+    --RED1: #8b0000;
+    --RED2: #740a01;
+}
+
+:focus {
+    outline: 2px solid var(--GOLD1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+}
+
+body {
+    background: #0D0D0D;
+    color: #F2F2F2;
+}
+
+.container h1 {
+    text-align: center;
+    color: var(--GOLD2);
+    transition: all 0.3s;
+}
+
+.container h1:hover {
+    transform: scale(1.1);
+    color: var(--GOLD1);
+    text-shadow: 0 0 4px var(--GOLD2);
+    cursor: pointer;
+}
+
+.container {
+    padding: 1rem;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.timer {
+    display: flex;
+    font-size: 4rem;
+    border: 2px solid var(--GOLD1);
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    background: var(--GRAY6);
+    user-select: none;
+    gap: 0.75rem;
+}
+
+.time {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 110px;
+}
+
+#milliseconds {
+    font-size: 2rem;
+}
+
+.buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    border: 0;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    cursor: pointer;
+    transform: scale(105%);
+}
+
+.separator {
+    color: var(--GRAY3);
+}
+
+.start {
+    background: var(--GREEN2);
+    color: var(--GRAY1);
+}
+.start:hover {
+    background: var(--GREEN1);
+    box-shadow: 0 0 10px var(--GREEN2);
+}
+
+.defaultButton {
+    background: var(--GOLD2);
+    color: black;
+}
+.defaultButton:hover {
+    background: var(--GOLD1);
+    box-shadow: 0 0 10px var(--GOLD2);
+}
+
+.reset {
+    background: var(--RED2);
+    color: var(--GRAY1);
+}
+.reset:hover {
+    background: var(--RED1);
+    box-shadow: 0 0 10px var(--RED2);
+}
+
+
+#pauseBtn, #resumeBtn {
+    display: none;
+}
